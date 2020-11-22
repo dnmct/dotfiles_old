@@ -1,5 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+
+#fnm config
+eval "$(fnm env)"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/danmcatee/.oh-my-zsh"
@@ -98,8 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
-alias code=code-insiders
 alias cat=bat
 alias zconf="vim ~/dev/dotfiles/zsh/.zshrc"
 alias kconf="vim ~/dev/dotfiles/kitty/kitty.conf"
 alias vconf="vim ~/dev/dotfiles/vim/init.vim"
+alias zreload="source ~/dev/dotfiles/zsh/.zshrc"
+alias dotfiles="cd ~/dev/dotfiles"
+
+eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
