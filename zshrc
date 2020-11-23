@@ -10,6 +10,9 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Hom
 #fnm config
 eval "$(fnm env)"
 
+#set fd as default search command for fzf
+#export FZF_DEFAULT_COMMAND='fd --type f'
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/danmcatee/.oh-my-zsh"
 
